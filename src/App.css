@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.App {
+  text-align: center;
+}
+.main-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff6e14;
+  margin-top: 0.7vh;
+}
+.title-le{
+  font-family: 'Lobster';
+  font-size: 30px;
+}
+.title-bondev{
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size:28px
+}
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+.bm-burger-bars {
+  background: #ff6e14;
+  border-radius: 30px;
+}
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+.bm-cross {
+  background: #bdc3c7;
+}
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+.bm-morph-shape {
+  fill: white;
+}
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+.bm-item {
+  display: inline-block;
+}
+.bm-overlay {
+  background: white;
+}
+.search-frame{
+  height: 200px;
+  background-color: #ff6e14;
+  border-radius:0 0 15% 0 ;
+}
+
