@@ -2,7 +2,13 @@
     background-color: white;
     border:none;
     color:grey;
+    width:300px;
+    height:30px;
+    text-align: center;
+}
+.hide-button{
+  display: none; 
 }
 .svg-inline--fa{
+}
 
-  }

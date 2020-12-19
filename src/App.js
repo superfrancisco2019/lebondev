@@ -1,37 +1,45 @@
-import React, { Component }from 'react';
-import { slide as Menu } from 'react-burger-menu';
-import Modal from './components/modal'
-import './App.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faList } from '@fortawesome/free-solid-svg-icons'
+import React, { Component } from "react";
+import SearchMenu from "./components/SearchMenu/SearchMenu";
+import SearchBar from "./components/SearchBar/SearchBar";
+import "./App.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faList, faSearch } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faList)
+library.add(faList, faSearch);
 
-
-class App extends Component{
-  showSettings (event) {
+class App extends Component {
+constructor(props){
+  super(props)
+}
+  showSettings(event) {
     event.preventDefault();
   }
-render(){
-    return(
-<div>
-  <div className="page-header">
-    <div className="main-title"><p className="title-le">le</p><p className="title-bondev">bondev</p></div>
-    <Menu>
-        <a id="parcours" className="menu-item" href="/"> Parcours </a>
-        <a id="formation" className="menu-item" href="/"> Formation </a>
-        <a id="hobbies" className="menu-item" href="/"> Hobbies </a>
-        <a id="réalisations" className="menu-item" href="/"> Réalisations </a>
-        <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-    </Menu>
-  </div>
-  <div className="search-frame">
-    <Modal/>
-    
-  </div>
-</div>
+  render() {
+    let clas = "showbar"
+    if(this.props.show){
+      clas="hidebar"
+    }
+    return (
+      <div>
+        <div className="page-header">
+          <div className="main-title">
+            <p>
+              <span className="title-le">le</span>
+              <span className="title-bondev">bondev</span>
+            </p>
+          </div>
+        </div>
+        <div className="search-frame">
+          <SearchMenu />
+          <SearchBar classname={clas}/>
+        </div>
+        <div className="comment-text">
+          Trouvez la bonne affaire parmi des milliers de développeurs
+        </div>
+      </div>
     );
+  }
 }
-}
+
 
 export default App;
